@@ -1,12 +1,12 @@
 import React from 'react'
 import Song from './Song'
 
-const SongList = ({songList}) => {
+const SongList = ({songList, handleToggle}) => {
     return (
         <div>
             {songList.map(song => {
                 return (
-                    <Song song = {song} />
+                    <Song song = {song} handleToggle={handleToggle} />
                 )
             })}
         </div>
