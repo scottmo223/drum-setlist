@@ -3,14 +3,13 @@ import './App.css';
 import Header from './Header'
 import data from './data.json'
 import SongList from './SongList'
-import Song from './Song'
 
 function App() {
   const [songList, setSongList] = useState(data)
 
   const handleToggle = (id) => {
     let mapped = songList.map(task => {
-      return task.id == id ? {...task, complete: !task.complete} : {...task}
+      return task.id === parseInt(id) ? {...task, complete: !task.complete} : {...task}
     })
     setSongList(mapped)
   }
