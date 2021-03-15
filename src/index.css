@@ -15,3 +15,25 @@ code {
 .strike {
   text-decoration: line-through;
 }
+
+.songRow {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+}
+
+.songTitle {
+  width: 22vw;
+}
+
+.songArtist {
+  margin-left: 50px;
+  width: 22vw;
+}
+
+.songTempo {
+  margin-left: 25px;
+  width: 50px;
+  text-align: right;
+}
