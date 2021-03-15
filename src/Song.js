@@ -7,7 +7,7 @@ const Song = ({song, handleToggle}) => {
     }
     
     return (
-        <div id={song.id} onClick={handleClick} className={(song.complete ? 'strike' : '') + ' songRow'} >
+        <div id={song.id} onClick={handleClick} className={(song.selected ? 'strike' : '') + ' songRow'} >
             <div className="songTitle">
                 {song.title}
             </div>
