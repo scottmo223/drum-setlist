@@ -14,10 +14,17 @@ function App() {
     setSongList(mapped)
   }
 
+  const handleFilter = () => {
+    let filtered = songList.filter(song => {
+      return !song.complete
+    })
+    setSongList(filtered)
+  }
+
   return (
     <div className="App">
       <Header />
-      <SongList songList={songList} handleToggle={handleToggle} />
+      <SongList songList={songList} handleToggle={handleToggle} handleFilter={handleFilter} />
     </div>
   );
 

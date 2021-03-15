@@ -1,7 +1,7 @@
 import React from 'react'
 import Song from './Song'
 
-const SongList = ({ songList, handleToggle }) => {
+const SongList = ({ songList, handleToggle, handleFilter}) => {
     return (
         <div>
             {songList.map(song => {
@@ -9,6 +9,7 @@ const SongList = ({ songList, handleToggle }) => {
                     <Song song={song} handleToggle={handleToggle} key={song.id} />
                 )
             })}
+            <button onClick={handleFilter}>Delete Songs</button>
         </div>
     )
 }
