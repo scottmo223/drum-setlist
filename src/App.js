@@ -6,7 +6,8 @@ import SongList from './SongList'
 
 function App() {
   const [songList, setSongList] = useState(data)
-
+  const [songId, setSongId] = useState(4)
+  
   const handleToggle = (id) => {
     let mapped = songList.map(task => {
       return task.id === parseInt(id) ? {...task, selected: !task.selected} : {...task}
@@ -22,8 +23,8 @@ function App() {
   }
 
   const addSong = (userInput) => {
-    let tempList = [...songList]
-    tempList = [...songList, {id: songList.length + 1, title: userInput, artist: 'todo', tempo: 5, selected: false}]
+    setSongId(songId + 1)
+    let tempList = [...songList, {id: songId, title: userInput, artist: 'todo', tempo: 5, selected: false}]
     setSongList(tempList)
   }
 
