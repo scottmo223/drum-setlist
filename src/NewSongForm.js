@@ -3,21 +3,21 @@ import React, { useState } from 'react'
 
 
 const NewSongForm = ({addSong}) => {
-    const [userInput, setUserInput] = useState('')
+    const [songInput, setSongInput] = useState('')
     
-    const handleChange = (e) => {
-        setUserInput(e.currentTarget.value)
+    const handleChange = (event) => {
+        setSongInput(event.currentTarget.value)
     }
     
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        addSong(userInput)
-        setUserInput('')
+    const handleSubmit = (event) => {
+        event.preventDefault()
+        addSong(songInput)
+        setSongInput('')
     }
 
     return(
         <form onSubmit={handleSubmit}>
-            <input value={userInput} type='text' onChange={handleChange} placeholder='something' />
+            <input value={songInput} type='text' onChange={handleChange} placeholder='something' />
             <button>Add Song</button>
         </form>
     )
