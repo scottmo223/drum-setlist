@@ -37,3 +37,17 @@ code {
   width: 60px;
   text-align: right;
 }
+
+.addSongForm {
+  margin: 50px 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.addSongForm input {
+  margin-bottom: 12px;
+}
+
+.addSongForm button {
+  margin: 0px 5em
+}

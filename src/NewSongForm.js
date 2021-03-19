@@ -29,7 +29,7 @@ const NewSongForm = ({addSong}) => {
     }
 
     return(
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className='addSongForm'>
             <input value={songInput} type='text' onChange={handleChange} placeholder='Song Title' name='song' />
             <input value={artistInput} type='text' onChange={handleChange} placeholder='Artist' name='artist' />
             <input value={tempoInput} type='text' onChange={handleChange} placeholder='Tempo' name='tempo' />
