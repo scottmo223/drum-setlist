@@ -22,9 +22,9 @@ function App() {
     setSongList(filtered)
   }
 
-  const addSong = (songInput, artistInput) => {
+  const addSong = (songInput, artistInput, tempoInput) => {
     setSongId(songId + 1)
-    let tempList = [...songList, {id: songId, title: songInput, artist: artistInput, tempo: 5, selected: false}]
+    let tempList = [...songList, {id: songId, title: songInput, artist: artistInput, tempo: tempoInput, selected: false}]
     setSongList(tempList)
   }
 
